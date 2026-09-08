@@ -1,0 +1,479 @@
+html, body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+  transition: 0.3s;
+}
+
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+nav ul li a:hover {
+  color: yellow;
+  transform: scale(1.1);
+}
+
+
+.klizac {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.klizac img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 15px;
+  animation: fade 3s infinite;
+  transition: 0.5s;
+}
+
+@keyframes fade {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+
+section {
+  padding: 60px 40px;
+  margin-bottom: 30px;
+}
+
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+
+.vesti article {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid #c40000;
+  transition: 0.3s;
+}
+
+
+.vesti article:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+
+button {
+  background: #c40000;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .klizac {
+    height: 250px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+
+body.tamno {
+
+    background:#111;
+    color:white;
+
+}
+
+body.tamno .intro,
+body.tamno .vesti article,
+body.tamno .box {
+
+    background:#222;
+    color:white;
+
+}
+
+body.tamno input,
+body.tamno textarea {
+
+    background:#222;
+    color:white;
+
+}
+
+
+img {
+  transition: 0.3s; 
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
+.intro {
+text-align:center;
+background:white;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.video iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.kontakt form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.kontakt input,
+.kontakt textarea {
+  width: 100%;
+  max-width: 400px;
+  resize: vertical;
+}
+
+.mapa {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.mapa iframe {
+  border-radius: 12px;
+}
+
+#status {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.logo img {
+  height: 50px;
+  transition: 0.3s;
+  background: white;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.dugme-tema,
+.dugme-font {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  min-width: 90px;  
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.dugme-tema:hover,
+.dugme-font:hover {
+  transform: scale(1.1);
+}
+
+.akcije-zaglavlja {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dugme-font {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+}
+
+body.font-serif,
+body.font-serif * {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+body.font-mono,
+body.font-mono * {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.zaglavlje {
+  background: #c40000;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+} 
+
+.meni-dugme {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+  padding: 0;
+}
+
+.meni-dugme span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.meni-dugme.aktivan span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.meni-dugme.aktivan span:nth-child(2) {
+  opacity: 0;
+}
+
+.meni-dugme.aktivan span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .meni-dugme {
+    display: flex;
+  }
+  .glavni-meni {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #c40000;
+    z-index: 999;
+  }
+
+  .glavni-meni.aktivan {
+    display: block;
+  }
+
+  .glavni-meni ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .glavni-meni li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .glavni-meni a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .zaglavlje {
+    position: relative;
+  }
+}
+
+.padajuci-meni {
+  position: relative;
+}
+
+.padajuci-prekidac::after {
+  content: " ▼";
+  font-size: 0.7rem;
+}
+
+.padajuca-lista {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #a00;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.padajuci-meni:hover .padajuca-lista {
+  display: block;
+}
+
+.padajuca-lista li {
+  padding: 0;
+}
+
+.padajuca-lista a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.padajuca-lista a:hover {
+  background: #c40000;
+  padding-left: 25px;
+}
+
+.glavni-meni ul { 
+  margin: 0; 
+  padding: 0; 
+}
+
+.prekidac::after { 
+  content: " ▼"; 
+  font-size: 0.7em;
+}
+
+.zaglavlje {
+    min-height: 85.6px;
+    display: flex;
+    align-items: center;
+}
+
+.zaglavlje .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.zaglavlje .logo img {
+    display: block;
+    max-height: 100%;
+    width: auto;
+}
