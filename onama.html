@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Istorija, stadion i osnovne informacije o FK Crvena zvezda">
+  <meta name="keywords" content="Crvena zvezda, stadion Rajko Mitić, istorija kluba, o klubu">
+
+  <title>O nama - FK Crvena zvezda</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="zaglavlje">        
+  <a href="index.html" class="logo">
+    <img src="slike/logo.png" alt="FK Crvena zvezda logo">  
+  </a>
+
+  <button class="meni-dugme" onclick="promeniMeni()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="navMenu" class="glavni-meni">
+    <ul>
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="onama.html">O nama</a></li>
+      <li class="padajuci-meni">
+        <a href="usluge.html" class="padajuci-prekidac">Usluge</a>
+        <ul class="padajuca-lista">
+          <li><a href="usluge.html#dres">Dres</a></li>
+          <li><a href="usluge.html#karte">Karte</a></li>
+          <li><a href="usluge.html#clanarina">Članarina</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="akcije-zaglavlja">
+  <div class="dugme-velicina" onclick="smanjiFont()">A−</div>
+  <div class="dugme-velicina" onclick="povecajFont()">A+</div>
+
+  <div id="fontToggle" class="dugme-font" onclick="promeniFont()">
+    <span id="fontLabel">Aa</span>
+  </div>
+
+  <div id="themeToggle" class="dugme-tema" onclick="promeniTemu()">
+    <span id="themeIcon">🌙</span>
+  </div>
+</div>
+</header>
+
+<section>
+
+  <h1>O klubu</h1>
+  <p>
+    FK Crvena zvezda je osnovana 1945. godine i jedan je od najtrofejnijih klubova u regionu.
+  </p>
+<br>
+  <h2>Stadion</h2>
+  <p>
+    Stadion Rajko Mitić je domaći teren kluba i poznat je po sjajnoj atmosferi.
+  </p>
+<br>
+
+  <h3>Video kluba</h3>
+
+<div class="video">
+<iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/ZMvtW9VP22k" title="FK Crvena zvezda video" frameborder="0" allowfullscreen> </iframe>
+</div>
+<div class="video">
+<video width="100%" height="400" controls poster="slike/stadion.jpg">
+  <source src="video/klub.mp4" type="video/mp4">
+  Vaš pregledač ne podržava prikaz video zapisa.
+</video>
+</div>
+
+<h3>Dokument o klubu</h3>
+
+<div class="pdf-prikaz">
+  <a href="dokumenti/klub.pdf" target="_blank" class="btn-pdf">Preuzmi PDF</a>
+</div>
+</section>
+
+<footer>
+  <p>&copy; 2026 FK Crvena zvezda</p>
+</footer>
+<script src="js/script.js"></script>
+
+</body>
+</html>
